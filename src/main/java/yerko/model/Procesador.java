@@ -21,8 +21,10 @@ public class Procesador {
 	
 	public Procesador(){
 		
+		
+		//letraRepetida('a');
+		escribirArchivo();
 		leerArchivo();
-		letraRepetida('a');
 	}
 	
 	public void leerArchivo(){
@@ -89,7 +91,7 @@ public class Procesador {
 			try {lector.close();}
 			
 			catch (IOException e) {
-				System.out.println("No se pudo abrir el archivo");
+				System.out.println("No se pudo cerrar el lector");
 				e.getMessage();
 				e.getStackTrace();
 				
@@ -97,7 +99,21 @@ public class Procesador {
 		}
 		
 	}
-	
+
+	public void escribirArchivo(){
+		
+		try {
+			escritor = new FileWriter(archivo, true);
+			Bescritor = new BufferedWriter(escritor);
+			
+			Bescritor.newLine();
+			Bescritor.write("Pruebaaaaaaaaaa");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 	
 
 }
