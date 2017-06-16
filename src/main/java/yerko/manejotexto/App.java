@@ -1,17 +1,17 @@
 package yerko.manejotexto;
 
+import yerko.model.Procesador;
+
 /**
  * Hello world!
  *
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
-        say();
+    public static void main( String[] args ){
+    	
+    	Procesador p = new Procesador();
     }
     
-    public static void say(){
-    	System.out.println("Hello lady");
-    }
+   
 }
